@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex</title>
+    <link rel="stylesheet" href="scss/custom.css">
+    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="scss/style.css">
+    <link rel="stylesheet" href="scss/types_color.css">
+</head>
+<body>
+    
+        <nav class="navbar">
+            <div class="container">
+            <img src="assets/poke icon.png" alt="logo pokemon">
+            <div class="input-group input-group-sm">
+                <input disabled type="text" class="form-control text-capitalize" placeholder="ingresar pokémon" aria-label="Recipient's username" aria-describedby="button-addon2">
+                <button class="btn btn-outline-secondary" type="button" id="button-addon2">Buscar</button>
+            </div>
+            
+            <select disabled class="form-select form-select-sm text-capitalize" size="1" aria-label="Default select example">
+                <option selected>todos</option>
+                <option value="1">normal</option>
+                <option value="2">fighting</option>
+                <option value="3">flying</option>
+                <option value="4">poison</option>
+                <option value="5">ground</option>
+                <option value="6">rock</option>
+                <option value="7">bug</option>
+                <option value="8">ghost</option>
+                <option value="9">steel</option>
+                <option value="10">fire</option>
+                <option value="11">water</option>
+                <option value="12">grass</option>
+                <option value="13">electric</option>
+                <option value="14">psychic</option>
+                <option value="15">ice</option>
+                <option value="16">dragon</option>
+                <option value="17">dark</option>
+                <option value="18">fairy</option>
+            </select>
+            </div>
+        </nav>
+
+        <div class="container-fluid p-2 bg-primary text-center regiones">
+            <button id="kanto" type="button" class="btn btn-sm btn-light text-capitalize m-2 region" data-bs-toggle="tooltip" data-bs-placement="bottom" title="001-151">kanto</button>
+            <button id="johto" type="button" class="btn btn-sm btn-light text-capitalize m-2 region" data-bs-toggle="tooltip" data-bs-placement="bottom" title="152-251">johto</button>
+            <button id="hoenn" type="button" class="btn btn-sm btn-light text-capitalize m-2 region" data-bs-toggle="tooltip" data-bs-placement="bottom" title="252-386">hoenn</button>
+            <button id="sinnoh" type="button" class="btn btn-sm btn-light text-capitalize m-2 region" data-bs-toggle="tooltip" data-bs-placement="bottom" title="387-493">sinnoh</button>
+            <button id="unova" type="button" class="btn btn-sm btn-light text-capitalize m-2 region" data-bs-toggle="tooltip" data-bs-placement="bottom" title="494-649">unova</button>
+            <button id="kalos" type="button" class="btn btn-sm btn-light text-capitalize m-2 region" data-bs-toggle="tooltip" data-bs-placement="bottom" title="650-721">kalos</button>
+            <button id="alola" type="button" class="btn btn-sm btn-light text-capitalize m-2 region" data-bs-toggle="tooltip" data-bs-placement="bottom" title="722-809">alola</button>
+            <button id="galar" type="button" class="btn btn-sm btn-light text-capitalize m-2 region" data-bs-toggle="tooltip" data-bs-placement="bottom" title="810-905">galar</button>
+            <button id="paldea" type="button" class="btn btn-sm btn-light text-capitalize m-2 region" data-bs-toggle="tooltip" data-bs-placement="bottom" title="906-1025">paldea</button>
+        </div>
+        
+        <main>
+            <div class="container-fluid row m-0 p-3 justify-content-center contenedor">
+                <!-- <div class="card" id="1">
+                    <div class="contenedor_img">
+                        <p class="id">#001</p>
+                        <img src="https://www.serebii.net/pokemongo/pokemon/001.png" class="img_pokemon" alt="pokemon">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title nombre">bulbasaur</h5>
+                        <div class="contenedor_tipos">
+                            <div class="tipo_uno">glass</div>
+                            <div class="tipo_dos">poison</div>
+                        </div>
+                        <div class="estadisticas">
+                            <div class="altura">
+                                <p class="e_borde">Altura</p>
+                                <p id="altura">0.7 M</p>
+                            </div>
+                            <div class="peso">
+                                <p class="e_borde">Peso</p>
+                                <p id="kilos">6.9 Kg</p>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-primary boton">Mas detalles</a>
+                    </div>
+                </div> -->
+            </div>
+        </main>
+
+
+        <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+            const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+            const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+            </script>
+</body>
+        <script src="script.js"></script>
+</html>

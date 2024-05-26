@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poetsen+One&display=swap');
+
+body {
+    user-select: none;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(223, 223, 223);
+}
+
+nav img {
+    width: 120px;
+}
+
+.input-group {
+    width: 30%;
+}
+
+.form-control {
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.btn-outline-secondary {
+    background-color: #454b50;
+    --bs-btn-color: #fcfdff;
+    --bs-btn-border-color: #454b50;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #6c757d;
+    --bs-btn-hover-border-color: #6c757d;
+    --bs-btn-focus-shadow-rgb: 108, 117, 125;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #6c757d;
+    --bs-btn-active-border-color: #6c757d;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #6c757d;
+    --bs-btn-disabled-bg: transparent;
+    --bs-btn-disabled-border-color: #6c757d;
+    --bs-gradient: none;
+  }
+
+.form-select {
+    width: 10%;
+}
+
+
+.card:hover {
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.219);
+}
+
+.contenedor_img {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.id {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0px;
+    width: 80%;
+    height: 60px;
+    top: 15px;
+    padding: 10px;
+    color: rgba(255, 255, 255, 0.600);
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 4em;
+}
+
+.img_pokemon {
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    top: 10%;
+    padding: 10px;
+    background-color: rgba(102, 51, 153, 0);
+}
+
+.card-body {
+    width: 98%;
+    margin-bottom: 1%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.card-body h5 {
+    margin-top: 30px;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #30464b;
+}
+
+.contenedor_tipos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 0.9em;
+    font-family: "Lato", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    width: 80%;
+    color: rgba(255, 255, 255);
+}
+
+.estadisticas {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 80%;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #30464b;
+}
+
+.estadisticas p {
+    display: flex;
+    width: 70px;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.e_borde {
+    border-bottom: 1px solid #30464b42;
+    font-weight: 600;
+    font-style: normal;
+    color: #30464b;
+}
+
+.boton {
+    width: 80%;
+}
