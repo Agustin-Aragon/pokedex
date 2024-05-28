@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     const contenedor = document.querySelector('.contenedor')
     mostrarPokemon(1, 151)
+    const todos = document.getElementById('todos')
     const kanto = document.getElementById('kanto')
     const johto = document.getElementById('johto')
     const hoenn = document.getElementById('hoenn')
@@ -10,6 +11,11 @@ document.addEventListener('DOMContentLoaded', function () {
     const alola = document.getElementById('alola')
     const galar = document.getElementById('galar')
     const paldea = document.getElementById('paldea')
+
+    todos.addEventListener('click', function() {
+        contenedor.innerHTML = ''
+        mostrarPokemon(1, 1025)
+    })
 
     kanto.addEventListener('click', function() {
         contenedor.innerHTML = ''
@@ -80,10 +86,6 @@ document.addEventListener('DOMContentLoaded', function () {
             })
         }
 
-
-
-
-
     // for (let i = inicio; i <= fin; i++) {
 
         //     fetch(`https://pokeapi.co/api/v2/pokemon/${i}`)
@@ -112,7 +114,7 @@ function tarjeta(d_id, d_name, d_type, d_height, d_weight) {
 
     if (d_type.length == 1) {
         const tarjeta =
-                    `<div class="card card_${d_type[0].type.name}" id=${d_id}>
+                    `<div class="card ${d_type[0].type.name}" id="${d_id}">
                         <div class="contenedor_img">
                             <p class="id">#${id}</p>
                             <img src=${`https://www.serebii.net/pokemongo/pokemon/${id}.png`} class="img_pokemon" alt="pokemon">
@@ -120,7 +122,7 @@ function tarjeta(d_id, d_name, d_type, d_height, d_weight) {
                         <div class="card-body">
                             <h5 class="card-title nombre">${d_name}</h5>
                             <div class="contenedor_tipos">
-                                <div class="${d_type[0].type.name}">${d_type[0].type.name}</div>
+                                <div class="tipo ${d_type[0].type.name}">${d_type[0].type.name}</div>
                             </div>
                             <div class="estadisticas">
                                 <div class="altura">
@@ -139,7 +141,7 @@ function tarjeta(d_id, d_name, d_type, d_height, d_weight) {
                 contenedor.insertAdjacentHTML('beforeend', tarjeta)
     } else {
         const tarjeta =
-                    `<div class="card card_${d_type[0].type.name}" id=${d_id}>
+                    `<div class="card ${d_type[0].type.name}" id=${d_id}>
                         <div class="contenedor_img">
                             <p class="id">#${id}</p>
                             <img src=${`https://www.serebii.net/pokemongo/pokemon/${id}.png`} class="img_pokemon" alt="pokemon">
@@ -147,8 +149,8 @@ function tarjeta(d_id, d_name, d_type, d_height, d_weight) {
                         <div class="card-body">
                             <h5 class="card-title nombre">${d_name}</h5>
                             <div class="contenedor_tipos">
-                                <div class="${d_type[0].type.name}">${d_type[0].type.name}</div>
-                                <div class="${d_type[1].type.name}">${d_type[1].type.name}</div>
+                                <div class="tipo ${d_type[0].type.name}">${d_type[0].type.name}</div>
+                                <div class="tipo ${d_type[1].type.name}">${d_type[1].type.name}</div>
                             </div>
                             <div class="estadisticas">
                                 <div class="altura">

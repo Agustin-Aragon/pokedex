@@ -1,467 +1,92 @@
-.card_normal {
-    background: linear-gradient(#A8A69F, #9099A1, #9099A1);;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 14em;
-    height: 22em;
-    border-radius: 20px;
-    text-transform: capitalize;
-    margin: 16px;
-    padding: 0;
-    border: none;
-    overflow: hidden;
-    user-select: none;
+:root {
+    --normal: linear-gradient(#A8A69F, #9099A1);
+    --fighting: linear-gradient(#E2454D, #CE406A);
+    --flying: linear-gradient(#A5BFEE, #90A9DE);
+    --posion: linear-gradient(#C561D4, #A566C7);
+    --ground: linear-gradient(#C9B787, #c7b37c);
+    --rock: linear-gradient(#d3905d, #D97745);
+    --bug: linear-gradient(#A7C733, #90C12D);
+    --ghost: linear-gradient(#7A74D6, #5369AC);
+    --steel: linear-gradient(#56AAAC, #53879C);
+    --fire: linear-gradient(#FFAE4C, #FF9C54);
+    --water: linear-gradient(#70C1E4, #4E91D6);
+    --grass: linear-gradient(#60dd4d, #49c436);
+    --electric: linear-gradient(#F4D23C, #eeca28);
+    --psychic: linear-gradient(#FEA59B, #F86D74);
+    --ice: linear-gradient(#91DCD7, #73CEC0);
+    --dragon: linear-gradient(#0581BC, #0969C1);
+    --dark: linear-gradient(#6F7583, #5A5366);
+    --fairy: linear-gradient(#F4A8E4, #f38bdd);
 }
 
 .normal {
-    background: linear-gradient(#A8A69F, #9099A1);
-    border-radius: 20px;
-    width: 70px;
-    height: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.card_fighting {
-    background: linear-gradient(#E2454D, #CE406A, #CE406A);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 14em;
-    height: 22em;
-    border-radius: 20px;
-    text-transform: capitalize;
-    margin: 16px;
-    padding: 0;
-    border: none;
-    overflow: hidden;
-    user-select: none;
+    background: var(--normal);
 }
 
 .fighting {
-    background: linear-gradient(#E2454D, #CE406A);
-    border-radius: 20px;
-    width: 70px;
-    height: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.card_flying {
-    background: linear-gradient(#A5BFEE, #90A9DE, #90A9DE);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 14em;
-    height: 22em;
-    border-radius: 20px;
-    text-transform: capitalize;
-    margin: 16px;
-    padding: 0;
-    border: none;
-    overflow: hidden;
-    user-select: none;
+    background: var(--fighting);
 }
 
 .flying {
-    background: linear-gradient(#A5BFEE, #90A9DE);
-    border-radius: 20px;
-    width: 70px;
-    height: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.card_poison {
-    background: linear-gradient(#C561D4, #A566C7, #A566C7);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 14em;
-    height: 22em;
-    border-radius: 20px;
-    text-transform: capitalize;
-    margin: 16px;
-    padding: 0;
-    border: none;
-    overflow: hidden;
-    user-select: none;
+    background: var(--flying);
 }
 
 .poison {
-    background: linear-gradient(#C561D4, #A566C7);
-    border-radius: 20px;
-    width: 70px;
-    height: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.card_ground {
-    background: linear-gradient(#C9B787, #c7b37c, #c7b37c);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 14em;
-    height: 22em;
-    border-radius: 20px;
-    text-transform: capitalize;
-    margin: 16px;
-    padding: 0;
-    border: none;
-    overflow: hidden;
-    user-select: none;
+    background: var(--posion);
 }
 
 .ground {
-    background: linear-gradient(#C9B787, #c7b37c);
-    border-radius: 20px;
-    width: 70px;
-    height: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.card_rock {
-    background: linear-gradient(#d3905d, #D97745, #D97745);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 14em;
-    height: 22em;
-    border-radius: 20px;
-    text-transform: capitalize;
-    margin: 16px;
-    padding: 0;
-    border: none;
-    overflow: hidden;
-    user-select: none;
+    background: var(--ground);
 }
 
 .rock {
-    background: linear-gradient(#d3905d, #D97745);
-    border-radius: 20px;
-    width: 70px;
-    height: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.card_bug {
-    background: linear-gradient(#A7C733, #90C12D, #90C12D);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 14em;
-    height: 22em;
-    border-radius: 20px;
-    text-transform: capitalize;
-    margin: 16px;
-    padding: 0;
-    border: none;
-    overflow: hidden;
-    user-select: none;
+    background: var(--rock);
 }
 
 .bug {
-    background: linear-gradient(#A7C733, #90C12D);
-    border-radius: 20px;
-    width: 70px;
-    height: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.card_ghost {
-    background: linear-gradient(#7A74D6, #5369AC, #5369AC);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 14em;
-    height: 22em;
-    border-radius: 20px;
-    text-transform: capitalize;
-    margin: 16px;
-    padding: 0;
-    border: none;
-    overflow: hidden;
-    user-select: none;
+    background: var(--bug);
 }
 
 .ghost {
-    background: linear-gradient(#7A74D6, #5369AC);
-    border-radius: 20px;
-    width: 70px;
-    height: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.card_steel {
-    background: linear-gradient(#56AAAC, #53879C, #53879C);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 14em;
-    height: 22em;
-    border-radius: 20px;
-    text-transform: capitalize;
-    margin: 16px;
-    padding: 0;
-    border: none;
-    overflow: hidden;
-    user-select: none;
+    background: var(--ghost);
 }
 
 .steel {
-    background: linear-gradient(#56AAAC, #53879C);
-    border-radius: 20px;
-    width: 70px;
-    height: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.card_fire {
-    background: linear-gradient(#FFAE4C, #FF9C54, #FF9C54);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 14em;
-    height: 22em;
-    border-radius: 20px;
-    text-transform: capitalize;
-    margin: 16px;
-    padding: 0;
-    border: none;
-    overflow: hidden;
-    user-select: none;
+    background: var(--steel);
 }
 
 .fire {
-    background: linear-gradient(#FFAE4C, #FF9C54);
-    border-radius: 20px;
-    width: 70px;
-    height: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.card_water {
-    background: linear-gradient(#70C1E4, #4E91D6, #4E91D6);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 14em;
-    height: 22em;
-    border-radius: 20px;
-    text-transform: capitalize;
-    margin: 16px;
-    padding: 0;
-    border: none;
-    overflow: hidden;
-    user-select: none;
+    background: var(--fire);
 }
 
 .water {
-    background: linear-gradient(#70C1E4, #4E91D6);
-    border-radius: 20px;
-    width: 70px;
-    height: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.card_grass {
-    background: linear-gradient(#60dd4d, #49c436, #49c436);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 14em;
-    height: 22em;
-    border-radius: 20px;
-    text-transform: capitalize;
-    margin: 16px;
-    padding: 0;
-    border: none;
-    overflow: hidden;
-    user-select: none;
+    background: var(--water);
 }
 
 .grass {
-    background: linear-gradient(#60dd4d, #49c436);
-    border-radius: 20px;
-    width: 70px;
-    height: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.card_electric {
-    background: linear-gradient(#F4D23C, #eeca28, #eeca28);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 14em;
-    height: 22em;
-    border-radius: 20px;
-    text-transform: capitalize;
-    margin: 16px;
-    padding: 0;
-    border: none;
-    overflow: hidden;
-    user-select: none;
+    background: var(--grass);
 }
 
 .electric {
-    background: linear-gradient(#F4D23C, #eeca28);
-    border-radius: 20px;
-    width: 70px;
-    height: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.card_psychic {
-    background: linear-gradient(#FEA59B, #F86D74, #F86D74);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 14em;
-    height: 22em;
-    border-radius: 20px;
-    text-transform: capitalize;
-    margin: 16px;
-    padding: 0;
-    border: none;
-    overflow: hidden;
-    user-select: none;
+    background: var(--electric);
 }
 
 .psychic {
-    background: linear-gradient(#FEA59B, #F86D74);
-    border-radius: 20px;
-    width: 70px;
-    height: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.card_ice {
-    background: linear-gradient(#91DCD7, #73CEC0, #73CEC0);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 14em;
-    height: 22em;
-    border-radius: 20px;
-    text-transform: capitalize;
-    margin: 16px;
-    padding: 0;
-    border: none;
-    overflow: hidden;
-    user-select: none;
+    background: var(--psychic);
 }
 
 .ice {
-    background: linear-gradient(#91DCD7, #73CEC0);
-    border-radius: 20px;
-    width: 70px;
-    height: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.card_dragon {
-    background: linear-gradient(#0581BC, #0969C1, #0969C1);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 14em;
-    height: 22em;
-    border-radius: 20px;
-    text-transform: capitalize;
-    margin: 16px;
-    padding: 0;
-    border: none;
-    overflow: hidden;
-    user-select: none;
+    background: var(--ice);
 }
 
 .dragon {
-    background: linear-gradient(#0581BC, #0969C1);
-    border-radius: 20px;
-    width: 70px;
-    height: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.card_dark {
-    background: linear-gradient(#6F7583, #5A5366, #5A5366);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 14em;
-    height: 22em;
-    border-radius: 20px;
-    text-transform: capitalize;
-    margin: 16px;
-    padding: 0;
-    border: none;
-    overflow: hidden;
-    user-select: none;
+    background: var(--dragon);
 }
 
 .dark {
-    background: linear-gradient(#6F7583, #5A5366);
-    border-radius: 20px;
-    width: 70px;
-    height: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.card_fairy {
-    background: linear-gradient(#F4A8E4, #f38bdd, #f38bdd);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 14em;
-    height: 22em;
-    border-radius: 20px;
-    text-transform: capitalize;
-    margin: 16px;
-    padding: 0;
-    border: none;
-    overflow: hidden;
-    user-select: none;
+    background: var(--dark);
 }
 
 .fairy {
-    background: linear-gradient(#F4A8E4, #f38bdd);
-    border-radius: 20px;
-    width: 70px;
-    height: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background: var(--fairy);
 }

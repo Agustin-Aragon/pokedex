@@ -6,19 +6,16 @@ body {
 }
 
 .navbar {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
     background-color: rgb(223, 223, 223);
 }
+
 
 nav img {
     width: 120px;
 }
 
 .input-group {
-    width: 30%;
+    width: 32%;
 }
 
 .form-control {
@@ -43,17 +40,55 @@ nav img {
     --bs-gradient: none;
   }
 
-.form-select {
-    width: 10%;
+
+.filtro {
+    background-color: rgb(239, 239, 239);
+    margin: 16px 0px 16px 0px;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: 20px;
+    width: fit-content;
 }
 
+.filtro button {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.filtro button img {
+    width: 40px;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 14em;
+    height: 22em;
+    border-radius: 20px;
+    text-transform: capitalize;
+    margin: 16px;
+    padding: 0;
+    border: none;
+    overflow: hidden;
+    user-select: none;
+}
 
 .card:hover {
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.219);
 }
 
 .contenedor_img {
-    height: 100px;
+    height: 28.41%;
+    width: 100%;
     display: flex;
     justify-content: center;
 }
@@ -63,10 +98,9 @@ nav img {
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 0px;
     width: 80%;
-    height: 60px;
-    top: 15px;
+    height: 17%;
+    top: 4.5%;
     padding: 10px;
     color: rgba(255, 255, 255, 0.600);
     font-family: "Lato", sans-serif;
@@ -75,17 +109,23 @@ nav img {
     font-size: 4em;
 }
 
-.img_pokemon {
+.contenedor_img img {
     position: absolute;
-    width: 130px;
-    height: 130px;
+    width: 58.04%;
+    height: 36.93%;
+}
+
+.img_pokemon {
+    position: relative;
+    width: 100%;
+    height: 100%;
     top: 10%;
-    padding: 10px;
-    background-color: rgba(102, 51, 153, 0);
+    padding: 5%;
 }
 
 .card-body {
     width: 98%;
+    height: 70%;
     margin-bottom: 1%;
     display: flex;
     flex-direction: column;
@@ -94,38 +134,49 @@ nav img {
     gap: 10px;
     background-color: rgb(255, 255, 255);
     border-radius: 20px;
-    padding: 10px;
+    padding: 20px 10px 20px 10px;
 }
 
 .card-body h5 {
-    margin-top: 30px;
+    margin-top: 15%;
     font-family: "Lato", sans-serif;
     font-weight: 700;
     font-style: normal;
     color: #30464b;
+    font-size: 1.25em;
 }
 
 .contenedor_tipos {
+    width: 100%;
     display: flex;
-    justify-content: center;
-    gap: 20px;
+    justify-content: space-evenly;
+    align-items: center;
     font-size: 0.9em;
     font-family: "Lato", sans-serif;
     font-weight: normal;
     font-style: normal;
-    width: 80%;
     color: rgba(255, 255, 255);
+    font-size: 0.9em;
+}
+
+.tipo {
+    border-radius: 20px;
+    width: 70px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .estadisticas {
     display: flex;
-    justify-content: center;
-    gap: 20px;
-    width: 80%;
+    justify-content: space-evenly;
+    width: 100%;
     font-family: "Lato", sans-serif;
     font-weight: 400;
     font-style: normal;
     color: #30464b;
+    font-size: 0.95em;
 }
 
 .estadisticas p {
@@ -137,7 +188,7 @@ nav img {
 }
 
 .e_borde {
-    border-bottom: 1px solid #30464b42;
+    border-bottom: 1px solid rgba(48, 70, 75, 0.259);
     font-weight: 600;
     font-style: normal;
     color: #30464b;
@@ -145,4 +196,6 @@ nav img {
 
 .boton {
     width: 80%;
+    height: 18.12%;
+    font-size: 1em;
 }

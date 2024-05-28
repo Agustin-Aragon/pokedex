@@ -1,0 +1,81 @@
+@media (max-width: 768px) {
+
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .input-group {
+        width: 52%;
+        margin: 8px 0px 8px 0px;
+    }
+
+    .regiones {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    
+    .filtro button {
+        width: 30px;
+        height: 30px;
+        border-radius: 15px;
+    }
+    
+    .filtro button img {
+        width: 30px;
+    }
+
+    .card {
+        width: 12em;
+        height: 20em;
+    }
+
+    .id {
+        font-size: 3.7em;
+    }
+
+    .card-body h5 {
+        font-size: 1.2em;
+    }
+
+    .contenedor_tipos {
+        font-size: 0.85em;
+    }
+
+    .tipo {
+        width: 65px;
+        height: 23px;
+    }
+
+    .estadisticas {
+        font-size: 0.9em;
+    }
+    
+    .estadisticas p {
+        display: flex;
+        width: 65px;
+    }
+    
+    .boton {
+        font-size: 0.9em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+@media (max-width: 425px) {
+
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .input-group {
+        width: 80%;
+        margin: 8px 0px 8px 0px;
+    }
+}
