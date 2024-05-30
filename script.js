@@ -8,11 +8,30 @@ document.addEventListener('DOMContentLoaded', function () {
     filtro_default.classList.add('filtro_todos')
     mostrarPokemon(1, 151)
 
+    var elementoRaiz = document.documentElement;
+    function eliminarComasDeElemento(elemento) {
+        // Verificar si el elemento es un nodo de texto
+        if (elemento.nodeType === Node.TEXT_NODE) {
+            // Reemplazar comas en el texto del nodo
+            elemento.nodeValue = elemento.nodeValue.replace(/,/g, '');
+        } else if (elemento.nodeType === Node.ELEMENT_NODE) {
+            // Recorrer los hijos del elemento
+            for (var i = 0; i < elemento.childNodes.length; i++) {
+                // Llamar recursivamente a esta función para cada hijo
+                eliminarComasDeElemento(elemento.childNodes[i]);
+            }
+        }
+    }
+    eliminarComasDeElemento(elementoRaiz);
+
     region.forEach(btn => btn.addEventListener('click', Event => {
         const region = Event.currentTarget.id
         const borrar_color = document.querySelectorAll('.region')
         const color = document.querySelector(`#${region}`)
         
+        resetFiltro()
+        filtro_default.classList.add('filtro_todos')
+
         borrar_color.forEach(element => {
             element.classList.remove('activo')
         });
@@ -56,31 +75,8 @@ document.addEventListener('DOMContentLoaded', function () {
     filtro.forEach(btn => btn.addEventListener('click', Event => {
         const filtro_tipo = Event.currentTarget.id
 
-        const btn_filtro = document.querySelectorAll('.btn-filtro')
         const border = document.getElementById(`${filtro_tipo}`)
-        
-        btn_filtro.forEach(borrar => {
-            borrar.classList.remove('filtro_todos')
-            borrar.classList.remove('normal')
-            borrar.classList.remove('fighting')
-            borrar.classList.remove('flying')
-            borrar.classList.remove('poison')
-            borrar.classList.remove('ground')
-            borrar.classList.remove('rock')
-            borrar.classList.remove('bug')
-            borrar.classList.remove('ghost')
-            borrar.classList.remove('steel')
-            borrar.classList.remove('fire')
-            borrar.classList.remove('water')
-            borrar.classList.remove('grass')
-            borrar.classList.remove('electric')
-            borrar.classList.remove('psychic')
-            borrar.classList.remove('ice')
-            borrar.classList.remove('dragon')
-            borrar.classList.remove('dark')
-            borrar.classList.remove('fairy')
-        })
-
+        resetFiltro()
         border.classList.add(`${filtro_tipo}`)
 
         const tarjeta = document.querySelectorAll('.card')
@@ -146,6 +142,7 @@ function tarjeta(d_id, d_name, d_type, d_height, d_weight) {
                     id = d_id
                 }
 
+
     let tipo = d_type.map(type => `<div class="tipo ${type.type.name}">${type.type.name}</div>`)
 
         const tarjeta =
@@ -169,10 +166,38 @@ function tarjeta(d_id, d_name, d_type, d_height, d_weight) {
                                     <p id="kilos">${(d_weight / 10)} kg</p>
                                 </div>
                             </div>
-                            <a href="#" class="btn btn-primary boton">Mas detalles</a>
-                        </div>
-                    </div>
-                    `
+                            <a href="#" class="btn btn-primary boton ${d_type[0].type.name}">Mas detalles</a>
+                            <div contenedor_next>
+                            <a href="#" class="next"></a>
+                            </div>
+                            </div>
+                    </div>`
                 contenedor.insertAdjacentHTML('beforeend', tarjeta)
 
+}
+
+function resetFiltro() {
+    const btn_filtro = document.querySelectorAll('.btn-filtro')
+
+    btn_filtro.forEach(borrar => {
+        borrar.classList.remove('filtro_todos')
+        borrar.classList.remove('normal')
+        borrar.classList.remove('fighting')
+        borrar.classList.remove('flying')
+        borrar.classList.remove('poison')
+        borrar.classList.remove('ground')
+        borrar.classList.remove('rock')
+        borrar.classList.remove('bug')
+        borrar.classList.remove('ghost')
+        borrar.classList.remove('steel')
+        borrar.classList.remove('fire')
+        borrar.classList.remove('water')
+        borrar.classList.remove('grass')
+        borrar.classList.remove('electric')
+        borrar.classList.remove('psychic')
+        borrar.classList.remove('ice')
+        borrar.classList.remove('dragon')
+        borrar.classList.remove('dark')
+        borrar.classList.remove('fairy')
+    })
 }

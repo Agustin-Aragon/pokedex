@@ -1,4 +1,4 @@
-@media (max-width: 768px) {
+@media (min-width: 489px) and (max-width: 768px) {
 
     .container {
         display: flex;
@@ -41,7 +41,7 @@
     }
 
     .contenedor_tipos {
-        font-size: 0.85em;
+        font-size: 0.8em;
     }
 
     .tipo {
@@ -73,8 +73,8 @@
 
 }
 
-@media (max-width: 425px) {
-
+@media (max-width: 489px) {
+    
     .container {
         display: flex;
         flex-direction: column;
@@ -82,5 +82,182 @@
 
     .input-group {
         width: 80%;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: row;
+        width: 80%;
+        height: 8em;
+        border-radius: 20px;
+        text-transform: capitalize;
+        margin: 16px 0px 16px 20px;
+        padding: 0;
+        border: none;
+        user-select: none;
+        overflow: visible;
+        view-timeline-name: --card;
+        view-timeline-axis: block;
+        animation-timeline: --card;
+        animation-name: show;
+        animation-range: entry 0% cover 20%;
+        animation-fill-mode: both;
+    }
+    
+    @keyframes show {
+        from{
+            opacity: 0%;
+            scale: 25%;
+        }
+        to {
+            opacity: 1;
+            scale: 100%;
+        }
+    }
+    
+    .card:hover {
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.219);
+    }
+    
+    .contenedor_img {
+        position: absolute;
+        width: 8em;
+        height: 100%;
+        left: -50px;
+        background-color: rgba(255, 255, 255, 0);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100px;
+        background-color: rgba(255, 0, 0, 0);
+    }
+    
+    .id {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 20%;
+        color: #fcfdff;
+        font-family: "Lato", sans-serif;
+        font-weight: 700;
+        font-style: italic;
+        font-size: 1.8em;
+        background-color: rgba(0, 255, 255, 0);
+        left: 30px;
+        top: 10px;
+        z-index: 1;
+    }
+    
+    .img_pokemon {
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        background-color: rgba(204, 45, 45, 0);
+        top: 0;
+        z-index: 1;
+    }
+    
+    .card-body {
+        position: absolute;
+        width: 80%;
+        height: 100%;
+        margin-left: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0);
+        border-radius: 0px;
+        padding-top: 35px;
+        margin-bottom: 0;
+    }
+    
+    .card-body h5 {
+        margin: 0px;
+        font-family: "Lato", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        color: #fcfdff;
+        font-size: 1em;
+    }
+    
+    .contenedor_tipos {
+        width: 130px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 13px;
+        color: #fcfdff;
+        font-size: 0.5em;
+        background-color: #fcfdff;
+        border-radius: 20px;
+        border: 2px solid #fcfdff;
+    }
+    
+    .tipo {
+        border-radius: 20px;
+        width: 50px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .estadisticas {
+        display: flex;
+        justify-content: space-between;
+        width: 130px;
+        font-weight: 400;
+        font-style: normal;
+        color: #fcfdff;
+        font-size: 0.8em;
+        background-color: rgba(102, 51, 153, 0);
+    }
+    
+    .estadisticas p {
+        display: flex;
+        width: 50px;
+        justify-content: center;
+        align-items: center;
+        color: #fcfdff;
+        margin: 0;
+    }
+    
+    .e_borde {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.259);
+        font-weight: 600;
+        font-style: normal;
+        color: #30464b;
+    }
+    
+    .boton {
+        display: none;
+    }
+
+    .next {
+        position: absolute;
+        display: block;
+        height: 34px;
+        width: 34px;
+        background-image: url(../assets/icon/next_pokeball.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-color: #ffffff;
+        right: 0px;
+        top: 40px;
+        border-radius: 20px;
+        border: 4px solid #ffffff;
+    }
+}
+
+/* --------------------------------------- */
+
+@media (max-width: 375px) {
+
+    .next {
+        right: -4px;
     }
 }
