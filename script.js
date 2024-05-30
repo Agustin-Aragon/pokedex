@@ -2,15 +2,26 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const region = document.querySelectorAll('.region')
     const filtro = document.querySelectorAll('.btn-filtro')
-
+    const region_default = document.getElementById('kanto')
+    region_default.classList.add('activo')
+    const filtro_default = document.getElementById('filtro_todos')
+    filtro_default.classList.add('filtro_todos')
     mostrarPokemon(1, 151)
 
     region.forEach(btn => btn.addEventListener('click', Event => {
         const region = Event.currentTarget.id
+        const borrar_color = document.querySelectorAll('.region')
+        const color = document.querySelector(`#${region}`)
+        
+        borrar_color.forEach(element => {
+            element.classList.remove('activo')
+        });
+        
+        color.classList.add('activo')
 
         switch (region) {
             case 'todos':
-            mostrarPokemon(1, 1025)
+                mostrarPokemon(1, 1025)
             break;
             case 'kanto':
                 mostrarPokemon(1, 151)
@@ -45,29 +56,56 @@ document.addEventListener('DOMContentLoaded', function () {
     filtro.forEach(btn => btn.addEventListener('click', Event => {
         const filtro_tipo = Event.currentTarget.id
 
-            const tarjeta = document.querySelectorAll('.card')
-            const ocultar_tarjetas = document.querySelectorAll('.card')
-            const sin_filtro = document.querySelectorAll('.card')
+        const btn_filtro = document.querySelectorAll('.btn-filtro')
+        const border = document.getElementById(`${filtro_tipo}`)
+        
+        btn_filtro.forEach(borrar => {
+            borrar.classList.remove('filtro_todos')
+            borrar.classList.remove('normal')
+            borrar.classList.remove('fighting')
+            borrar.classList.remove('flying')
+            borrar.classList.remove('poison')
+            borrar.classList.remove('ground')
+            borrar.classList.remove('rock')
+            borrar.classList.remove('bug')
+            borrar.classList.remove('ghost')
+            borrar.classList.remove('steel')
+            borrar.classList.remove('fire')
+            borrar.classList.remove('water')
+            borrar.classList.remove('grass')
+            borrar.classList.remove('electric')
+            borrar.classList.remove('psychic')
+            borrar.classList.remove('ice')
+            borrar.classList.remove('dragon')
+            borrar.classList.remove('dark')
+            borrar.classList.remove('fairy')
+        })
 
-            ocultar_tarjetas.forEach(ocultar => {
-                ocultar.style.display = 'none'
-            })
+        border.classList.add(`${filtro_tipo}`)
 
-            tarjeta.forEach(tarjeta => {
-                const tipos = tarjeta.querySelectorAll('.tipo')
-                tipos.forEach(tipo => {
-                    if(tipo.classList.contains(filtro_tipo)) {
-                        tarjeta.style.display = ''
-                    }
-                })
+        const tarjeta = document.querySelectorAll('.card')
+        const ocultar_tarjetas = document.querySelectorAll('.card')
+        const sin_filtro = document.querySelectorAll('.card')
+
+        ocultar_tarjetas.forEach(ocultar => {
+            ocultar.style.display = 'none'
+        })
+
+        tarjeta.forEach(tarjeta => {
+            const tipos = tarjeta.querySelectorAll('.tipo')
+            tipos.forEach(tipo => {
+                if(tipo.classList.contains(filtro_tipo)) {
+                    tarjeta.style.display = ''
+                }
             })
-            
-            if(filtro_tipo.includes('todos')) {
-                sin_filtro.forEach(filtro => {
-                    filtro.style.display = ''
-                })
-            }
-        }))
+        })
+        
+        if(filtro_tipo.includes('filtro_todos')) {
+            sin_filtro.forEach(filtro => {
+                filtro.style.display = ''
+            })
+        }
+    }))
 })
 
 function mostrarPokemon (inicio, fin) {
@@ -136,5 +174,5 @@ function tarjeta(d_id, d_name, d_type, d_height, d_weight) {
                     </div>
                     `
                 contenedor.insertAdjacentHTML('beforeend', tarjeta)
-                
+
 }

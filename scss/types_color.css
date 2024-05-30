@@ -3,8 +3,8 @@
     --fighting: linear-gradient(#E2454D, #CE406A);
     --flying: linear-gradient(#A5BFEE, #90A9DE);
     --posion: linear-gradient(#C561D4, #A566C7);
-    --ground: linear-gradient(#C9B787, #c7b37c);
-    --rock: linear-gradient(#d3905d, #D97745);
+    --ground: linear-gradient(#d3905d, #D97745);
+    --rock: linear-gradient(#C9B787, #c7b37c);
     --bug: linear-gradient(#A7C733, #90C12D);
     --ghost: linear-gradient(#7A74D6, #5369AC);
     --steel: linear-gradient(#56AAAC, #53879C);
@@ -17,6 +17,17 @@
     --dragon: linear-gradient(#0581BC, #0969C1);
     --dark: linear-gradient(#6F7583, #5A5366);
     --fairy: linear-gradient(#F4A8E4, #f38bdd);
+    --borde: red;
+}
+
+.filtro_todos {
+    background-color: rgba(0, 0, 0, 0.500);
+    border: 2px solid transparent;
+}
+
+.filtro_todos:hover {
+    background-color: rgba(0, 0, 0, 0.500);
+    border: 2px solid transparent;
 }
 
 .normal {

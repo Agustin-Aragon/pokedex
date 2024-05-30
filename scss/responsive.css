@@ -18,9 +18,9 @@
     }
     
     .filtro button {
-        width: 30px;
-        height: 30px;
-        border-radius: 15px;
+        width: 34px;
+        height: 34px;
+        border-radius: 16px;
     }
     
     .filtro button img {
@@ -28,7 +28,7 @@
     }
 
     .card {
-        width: 12em;
+        width: 13.3em;
         height: 20em;
     }
 
@@ -63,6 +63,12 @@
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+
+    .region:hover {
+        background-color: #454b50;
+        color: #fcfdff;
+        border-color: #6c757d;
     }
 
 }
