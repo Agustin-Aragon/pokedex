@@ -74,6 +74,10 @@
 }
 
 @media (max-width: 489px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
     
     .input-group {
         width: 80%;
