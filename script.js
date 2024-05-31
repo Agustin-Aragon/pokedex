@@ -8,22 +8,6 @@ document.addEventListener('DOMContentLoaded', function () {
     filtro_default.classList.add('filtro_todos')
     mostrarPokemon(1, 151)
 
-    var elementoRaiz = document.documentElement;
-    function eliminarComasDeElemento(elemento) {
-        // Verificar si el elemento es un nodo de texto
-        if (elemento.nodeType === Node.TEXT_NODE) {
-            // Reemplazar comas en el texto del nodo
-            elemento.nodeValue = elemento.nodeValue.replace(/,/g, '');
-        } else if (elemento.nodeType === Node.ELEMENT_NODE) {
-            // Recorrer los hijos del elemento
-            for (var i = 0; i < elemento.childNodes.length; i++) {
-                // Llamar recursivamente a esta función para cada hijo
-                eliminarComasDeElemento(elemento.childNodes[i]);
-            }
-        }
-    }
-    eliminarComasDeElemento(elementoRaiz);
-
     region.forEach(btn => btn.addEventListener('click', Event => {
         const region = Event.currentTarget.id
         const borrar_color = document.querySelectorAll('.region')

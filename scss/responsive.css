@@ -75,26 +75,16 @@
 
 @media (max-width: 489px) {
     
-    .container {
-        display: flex;
-        flex-direction: column;
-    }
-
     .input-group {
         width: 80%;
     }
 
     .card {
-        display: flex;
-        flex-direction: row;
         width: 80%;
-        height: 8em;
-        border-radius: 20px;
-        text-transform: capitalize;
+        height: 10em;
         margin: 16px 0px 16px 20px;
         padding: 0;
         border: none;
-        user-select: none;
         overflow: visible;
         view-timeline-name: --card;
         view-timeline-axis: block;
@@ -121,40 +111,26 @@
     
     .contenedor_img {
         position: absolute;
-        width: 8em;
+        width: 10em;
         height: 100%;
-        left: -50px;
-        background-color: rgba(255, 255, 255, 0);
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        left: -60px;
         border-radius: 100px;
-        background-color: rgba(255, 0, 0, 0);
     }
     
     .id {
         position: absolute;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         width: 100%;
         height: 20%;
         color: #fcfdff;
-        font-family: "Lato", sans-serif;
-        font-weight: 700;
-        font-style: italic;
         font-size: 1.8em;
-        background-color: rgba(0, 255, 255, 0);
-        left: 30px;
+        left: 22px;
         top: 10px;
-        z-index: 1;
     }
     
     .img_pokemon {
         width: 100%;
         height: 100%;
         padding: 20px;
-        background-color: rgba(204, 45, 45, 0);
         top: 0;
         z-index: 1;
     }
@@ -163,7 +139,7 @@
         position: absolute;
         width: 80%;
         height: 100%;
-        margin-left: 30%;
+        margin-left: 20%;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -180,18 +156,15 @@
         font-weight: 700;
         font-style: normal;
         color: #fcfdff;
-        font-size: 1em;
+        font-size: 1.7em;
     }
     
     .contenedor_tipos {
-        width: 130px;
+        width: 180px;
         height: 30px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 13px;
+        gap: 6px;
         color: #fcfdff;
-        font-size: 0.5em;
+        font-size: 0.8em;
         background-color: #fcfdff;
         border-radius: 20px;
         border: 2px solid #fcfdff;
@@ -199,8 +172,8 @@
     
     .tipo {
         border-radius: 20px;
-        width: 50px;
-        height: 20px;
+        width: 80px;
+        height: 25px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -208,20 +181,14 @@
     
     .estadisticas {
         display: flex;
-        justify-content: space-between;
-        width: 130px;
-        font-weight: 400;
-        font-style: normal;
+        justify-content: space-evenly;
+        width: 180px;
         color: #fcfdff;
-        font-size: 0.8em;
-        background-color: rgba(102, 51, 153, 0);
+        font-size: 1em;
     }
     
     .estadisticas p {
-        display: flex;
-        width: 50px;
-        justify-content: center;
-        align-items: center;
+        width: 80px;
         color: #fcfdff;
         margin: 0;
     }
@@ -240,24 +207,70 @@
     .next {
         position: absolute;
         display: block;
-        height: 34px;
-        width: 34px;
+        width: 48px;
+        height: 48px;
         background-image: url(../assets/icon/next_pokeball.png);
         background-repeat: no-repeat;
         background-size: contain;
         background-color: #ffffff;
-        right: 0px;
-        top: 40px;
-        border-radius: 20px;
+        right: -24px;
+        top: 30%;
+        border-radius: 32px;
         border: 4px solid #ffffff;
+
     }
 }
 
-/* --------------------------------------- */
+@media(max-width: 443px) {
+    .card-body h5 {
+        font-size: 1.5em;
+    }
 
-@media (max-width: 375px) {
+    .contenedor_tipos {
+        font-size: 0.8em;
+    }
+
+    .estadisticas {
+        font-size: 0.9em;
+    }
 
     .next {
-        right: -4px;
+        right: -24px;
     }
+}
+
+@media(max-width: 425px) {
+    .card-body h5 {
+        font-size: 1.2em;
+    }
+
+    .contenedor_tipos {
+        width: 140px;
+        gap: 4px;
+    }
+    
+    .tipo {
+        width: 68px;
+        height: 25px;
+    }
+    
+    .estadisticas {
+        justify-content: space-evenly;
+        width: 140px;
+        color: #fcfdff;
+    }
+    
+    .estadisticas p {
+        width: 68px;
+        margin: 0;
+    }
+
+}
+
+@media (max-width: 320px) {
+
+    .card-body h5 {
+        font-size: 1.1em;
+    }
+
 }
