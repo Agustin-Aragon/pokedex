@@ -77,6 +77,7 @@
     .container {
         display: flex;
         flex-direction: column;
+        width: 80%;
     }
     
     .input-group {
@@ -227,7 +228,7 @@
 
 @media(max-width: 443px) {
     .card-body h5 {
-        font-size: 1.5em;
+        font-size: 1.35em;
     }
 
     .contenedor_tipos {
@@ -243,7 +244,7 @@
     }
 }
 
-@media(max-width: 425px) {
+@media(max-width: 374px) {
     .card-body h5 {
         font-size: 1.2em;
     }
