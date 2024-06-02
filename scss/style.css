@@ -95,12 +95,12 @@ nav img {
     border: none;
     overflow: hidden;
     user-select: none;
-    view-timeline-name: --card;
+    /* view-timeline-name: --card;
     view-timeline-axis: block;
     animation-timeline: --card;
     animation-name: show;
     animation-range: entry 0% cover 30%;
-    animation-fill-mode: both;
+    animation-fill-mode: both; */
 }
 
 @keyframes show {

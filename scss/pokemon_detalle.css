@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poetsen+One&display=swap');
+
+
+body {
+    user-select: none;
+}
+
+.navbar {
+    background-color: rgb(223, 223, 223);
+}
+
+nav img {
+    width: 120px;
+}
+
+.input-group {
+    width: 32%;
+}
+
+.form-control {
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.btn-outline-secondary {
+    background-color: #454b50;
+    /* color */
+    --bs-btn-color: #fcfdff;
+    /* border */
+    --bs-btn-border-color: #454b50; 
+    /* hover color */
+    --bs-btn-hover-bg: #6c757d;
+    --bs-btn-hover-border-color: #6c757d;
+    --bs-btn-focus-shadow-rgb: 108, 117, 125;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #6c757d;
+    --bs-btn-active-border-color: #6c757d;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #6c757d;
+    --bs-btn-disabled-bg: transparent;
+    --bs-btn-disabled-border-color: #6c757d;
+    --bs-gradient: none;
+  }
+
+  .card {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px;
+    text-transform: capitalize;
+    padding: 0;
+    border: none;
+    overflow: hidden;
+    user-select: none;
+}
+
+
+@keyframes carta {
+
+}
+
+.contenedor_barras {
+    width: 100%;
+    height: 100%;
+}
+
+.barras {
+    background-color: white;
+}
+
+.inicio {
+    position: absolute;
+    width: 120%;
+    height: 360px;
+    left: -10px;
+    background-color: rgba(255, 255, 255);
+    top: -60px;
+    transform: rotate(-3deg) translateY(-202px);
+    z-index: 1;
+
+}
+
+.fin {
+    position: absolute;
+    width: 110%;
+    height: 300px;
+    left: -10px;
+    background-color: rgb(255, 255, 255);
+    bottom: -60px;
+    transform: rotate(-3deg) translateY(200px);
+    z-index: 2;
+}
+
+.contenedor_img {
+    position: absolute;
+    height: 475px;
+    width: 475px;
+    z-index: 1;
+    margin-bottom: 0px;
+    background-color: rgba(0, 0, 0, 0);
+    margin-top: 40px;
+    transform: translateY(-30px);
+}
+
+.mostrar_img {
+    animation: mostrar_img 1s both;
+}
+
+@keyframes mostrar_img {
+    from {
+        transform: translateY(0px);
+    }
+}
+
+
+.img_pokemon {
+    width: 475px;
+    height: 475px;
+    background-color: rgba(0, 255, 255, 0);
+}
+
+.id {
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    left: 180px;
+    bottom: -10px;
+    color: rgba(0, 0, 0, 0.800);
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 6em;
+}
+
+.contenedor_nombre {
+    width: 100%;
+    height: 20%;
+    bottom: 63px;
+    z-index: 0;
+    transform: rotate(-3deg);
+    position: absolute;
+    z-index: 1;
+    padding-left: 80px;
+    padding-bottom: 10px;
+}
+
+.nombre {
+    position: relative;
+    width: 100%;
+    height: 30%;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 5em;
+    text-shadow: 1px 1px 1px black;
+}
+
+.mostrar_nombre {
+    animation: mostrar_nombre 1s both;
+}
+
+@keyframes mostrar_nombre {
+    from {
+        transform: translateX(60px);
+    }
+}
+
+.contenedor_botones {
+    width: 100%;
+    height: fit-content;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.boton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 70px;
+    background-color: rgba(0, 0, 0, 0.100);
+    border-radius: 4px;
+}
+
+.boton_izquierda {
+    transition: all 1s 0.5s;
+}
+
+.boton_izquierda:hover {
+    background-color: rgba(0, 0, 0, 0.200);
+    transform: translateX(-20px);
+}
+
+.boton_derecha{
+    transition: all 1s 0.5s;
+}
+
+.boton_derecha:hover {
+    background-color: rgba(0, 0, 0, 0.200);
+    transform: translateX(20px);
+}
+
+.izquierda {
+    width: fit-content;
+    border-radius: 10px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.derecha {
+    width: fit-content;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+
+.scroll {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.scroll svg {
+    background-color: rgba(0, 0, 0, 0.100);
+    border-radius: 15px;
+    transition: all 1s ease;
+    animation: scroll 3s infinite alternate-reverse;
+    width: 40px;
+    height: 40px;
+}
+
+
+@keyframes scroll {
+    to {
+        transform: translateY(10px);
+    }
+}
+
+.contenedor_descripcion {
+    width: 20%;
+    height: 60%;
+    position: absolute;
+    transform: translateX(400px) rotate(-3deg);
+    display: flex;
+    justify-content: center;
+    text-transform: none;
+    text-align: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 20px;
+    z-index: 1;
+}
+
+.text_titulo {
+    position: absolute;
+    font-size: 2em;
+    background-color: #333333;
+    transform: translateY(-115px);
+    text-transform: uppercase;
+    padding: 10px;
+    width: 240px;
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+}
+
+.text_descripcion {
+    font-size: 1.2em;
+    color: #ffffff;
+    font-family: "Lato", sans-serif;
+    font-weight: 600;
+    height: 100%;
+    transform: translateY(60px);
+}
+
+.contenedor_tipos {
+    width: 300px;
+    height: 100px;
+    position: absolute;
+    left: 130px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.mostrar_tipo {
+    animation: escalado 1s;
+}
+
+.mostrar_descripcion {
+    animation: escalado 1s;
+}
+
+@keyframes escalado {
+    from {
+        transform: scale(0.1);
+    }
+}
+
+.tipo {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    border: 1px solid white;
+    border-radius: 50px;
+}
+
+.tipo img {
+    width: 100%;
+}

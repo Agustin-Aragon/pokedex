@@ -6,19 +6,78 @@
     <title>Pokemon</title>
     <link rel="stylesheet" href="scss/custom.css">
     <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
-    <link rel="stylesheet" href="scss/style.css">
+    <link rel="stylesheet" href="scss/pokemon_detalle.css">
     <link rel="stylesheet" href="scss/types_color.css">
     <link rel="stylesheet" href="scss/responsive.css">
 </head>
 <body>
     <nav class="navbar">
         <div class="container">
-        <img src="assets/poke icon.png" alt="logo pokemon">
+        <a href="index.html"><img src="assets/poke icon.png" alt="logo pokemon"></a>
         <div class="input-group input-group-sm">
             <input type="text" class="form-control text-capitalize" placeholder="ingresar pokémon" aria-label="Recipient's username" aria-describedby="button-addon2">
             <button class="btn btn-outline-secondary" type="button" id="button-addon2">Buscar</button>
         </div>
         </div>
     </nav>
+    <main>
+        
+        <div class="container-fluid row m-0 p-0 justify-content-center contenedor">
+            
+            <div class="card">
+
+                <div class="contenedor_barras">
+                    <div class="barras inicio">
+                        <p class="id">#</p>
+                    </div>
+                    <div class="barras fin"></div>
+                </div>
+                
+                <div class="contenedor_img">
+                    <img src="" alt="pokemon" class="img">
+                </div>
+
+                <div class="contenedor_nombre">
+                    <p class="nombre"></p>
+                </div>
+
+                <div class="contenedor_botones">
+                    <div class="boton boton_izquierda">
+                        <button class="izquierda">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="white" class="bi bi-chevron-left" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="boton boton_derecha">
+                        <button class="derecha">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="white" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="contenedor_descripcion">
+                    <span class="text_titulo">description</span>
+                    <span class="text_descripcion">Very smart and very vengeful. Grabbing one ofits many tails could result in a 1000-year curse.</span>
+                </div>
+
+                <div class="contenedor_tipos">
+                </div>
+            </div>
+
+            <div class="scroll">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-down-short" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4"/>
+                  </svg>
+            </div>
+
+
+
+        </div>
+
+    </main>
 </body>
+<script src="pokemon.js" defer></script>
 </html>

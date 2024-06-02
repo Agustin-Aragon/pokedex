@@ -64,10 +64,8 @@ document.addEventListener('DOMContentLoaded', function () {
         border.classList.add(`${filtro_tipo}`)
 
         const tarjeta = document.querySelectorAll('.card')
-        const ocultar_tarjetas = document.querySelectorAll('.card')
-        const sin_filtro = document.querySelectorAll('.card')
 
-        ocultar_tarjetas.forEach(ocultar => {
+        tarjeta.forEach(ocultar => {
             ocultar.style.display = 'none'
         })
 
@@ -81,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function () {
         })
         
         if(filtro_tipo.includes('filtro_todos')) {
-            sin_filtro.forEach(filtro => {
+            tarjeta.forEach(filtro => {
                 filtro.style.display = ''
             })
         }
@@ -130,7 +128,7 @@ function tarjeta(d_id, d_name, d_type, d_height, d_weight) {
     let tipo = d_type.map(type => `<div class="tipo ${type.type.name}">${type.type.name}</div>`)
 
         const tarjeta =
-                    `<div class="card ${d_type[0].type.name}" id="${d_id}">
+                    `<div class="card ${d_type[0].type.name}">
                         <div class="contenedor_img">
                             <p class="id">#${id}</p>
                             <img src=${`https://www.serebii.net/pokemongo/pokemon/${id}.png`} class="img_pokemon" alt="pokemon">
@@ -150,9 +148,9 @@ function tarjeta(d_id, d_name, d_type, d_height, d_weight) {
                                     <p id="kilos">${(d_weight / 10)} kg</p>
                                 </div>
                             </div>
-                            <a href="#" class="btn btn-primary boton ${d_type[0].type.name}">Mas detalles</a>
+                            <a href="pokemon.html?pokemon=${d_id}" class="btn btn-primary boton ${d_type[0].type.name}">Mas detalles</a>
                             <div contenedor_next>
-                            <a href="#" class="next"></a>
+                            <a href="pokemon.html?pokemon=${d_id}" class="next"></a>
                             </div>
                             </div>
                     </div>`
@@ -162,26 +160,9 @@ function tarjeta(d_id, d_name, d_type, d_height, d_weight) {
 
 function resetFiltro() {
     const btn_filtro = document.querySelectorAll('.btn-filtro')
+    const clases = ['filtro_todos', 'normal', 'fighting', 'flying', 'poison', 'ground', 'rock', 'bug', 'ghost', 'steel', 'fire', 'water', 'grass', 'electric', 'psychic', 'ice', 'dragon', 'dark', 'fairy']
 
     btn_filtro.forEach(borrar => {
-        borrar.classList.remove('filtro_todos')
-        borrar.classList.remove('normal')
-        borrar.classList.remove('fighting')
-        borrar.classList.remove('flying')
-        borrar.classList.remove('poison')
-        borrar.classList.remove('ground')
-        borrar.classList.remove('rock')
-        borrar.classList.remove('bug')
-        borrar.classList.remove('ghost')
-        borrar.classList.remove('steel')
-        borrar.classList.remove('fire')
-        borrar.classList.remove('water')
-        borrar.classList.remove('grass')
-        borrar.classList.remove('electric')
-        borrar.classList.remove('psychic')
-        borrar.classList.remove('ice')
-        borrar.classList.remove('dragon')
-        borrar.classList.remove('dark')
-        borrar.classList.remove('fairy')
+        clases.forEach(elemento => borrar.classList.remove(elemento))
     })
 }

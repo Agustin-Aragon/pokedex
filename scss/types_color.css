@@ -17,7 +17,25 @@
     --dragon: linear-gradient(#0581BC, #0969C1);
     --dark: linear-gradient(#6F7583, #5A5366);
     --fairy: linear-gradient(#F4A8E4, #f38bdd);
-    --borde: red;
+
+    --descripcion-normal: #A8A69F;
+    --descripcion-fighting: #E2454D;
+    --descripcion-flying: #A5BFEE;
+    --descripcion-poison: #C561D4;
+    --descripcion-ground: #d3905d;
+    --descripcion-rock: #C9B787;
+    --descripcion-bug: #A7C733;
+    --descripcion-ghost: #7A74D6;
+    --descripcion-steel: #56AAAC;
+    --descripcion-fire: #FFAE4C;
+    --descripcion-water: #70C1E4;
+    --descripcion-grass: #60dd4d;
+    --descripcion-electric: #F4D23C;
+    --descripcion-psychic: #FEA59B;
+    --descripcion-ice: #91DCD7;
+    --descripcion-dragon: #0581BC;
+    --descripcion-dark: #6F7583;
+    --descripcion-fairy: #F4A8E4;
 }
 
 .filtro_todos {
@@ -100,4 +118,94 @@
 
 .fairy {
     background: var(--fairy);
+}
+
+.text_titulo_normal {
+
+    color: var(--descripcion-normal);
+}
+
+.text_titulo_fighting {
+
+    color: var(--descripcion-fighting);
+}
+
+.text_titulo_flying {
+
+    color: var(--descripcion-flying);
+}
+
+.text_titulo_poison {
+
+    color: var(--descripcion-poison);
+}
+
+.text_titulo_ground {
+
+    color: var(--descripcion-ground);
+}
+
+.text_titulo_rock {
+
+    color: var(--descripcion-rock);
+}
+
+.text_titulo_bug {
+
+    color: var(--descripcion-bug);
+}
+
+.text_titulo_ghost {
+
+    color: var(--descripcion-ghost);
+}
+
+.text_titulo_steel {
+
+    color: var(--descripcion-steel);
+}
+
+.text_titulo_fire {
+
+    color: var(--descripcion-fire);
+}
+
+.text_titulo_water {
+
+    color: var(--descripcion-water);
+}
+
+.text_titulo_grass {
+
+    color: var(--descripcion-grass);
+}
+
+.text_titulo_electric {
+
+    color: var(--descripcion-electric);
+}
+
+.text_titulo_psychic {
+
+    color: var(--descripcion-psychic);
+}
+
+.text_titulo_ice {
+
+    color: var(--descripcion-ice);
+}
+
+.text_titulo_dragon {
+
+    color: var(--descripcion-dragon);
+}
+
+.text_titulo_dark {
+
+    color: var(--descripcion-dark);
+}
+
+.text_titulo_fairy {
+
+    color: var(--descripcion-fairy);
 }
